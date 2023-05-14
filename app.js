@@ -67,7 +67,7 @@ function handle(msg) {
   if (!msg) {
     return
   }
-  if (msg.text && msg.text.includes('@') && !msg.text.includes('banofbot')) {
+  if (msg.text && msg.text.includes('@') && !msg.text.includes('rsbanofbot')) {
     return
   }
   const isPrivateChat =
@@ -80,14 +80,14 @@ function handle(msg) {
   const isEntry =
     (msg.new_chat_participant &&
       msg.new_chat_participant.username &&
-      msg.new_chat_participant.username === 'banofbot') ||
+      msg.new_chat_participant.username === 'rsbanofbot') ||
     msg.group_chat_created
   db.findChat(msg.chat)
     .then((chat) => {
       let isReply =
         msg.reply_to_message &&
         msg.text &&
-        (msg.text.includes('banofbot') ||
+        (msg.text.includes('rsbanofbot') ||
           msg.text.includes('@ban') ||
           msg.text.includes('voteban') ||
           msg.text.includes('Voteban') ||
