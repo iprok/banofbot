@@ -77,7 +77,7 @@ async function startRequest(bot, msg) {
     request.chat.language,
     starterName,
     candidateName
-  )}\n${promoAddition}`
+  )}`
   const options = {
     parse_mode: 'HTML',
     disable_web_page_preview: true,
@@ -201,7 +201,7 @@ async function updateMessage(bot, request) {
     request.chat.language,
     starterName,
     candidateName
-  )}\n${promoAddition}`
+  )}`
   const options = {
     parse_mode: 'HTML',
     chat_id: request.inline_chat_id,
@@ -271,7 +271,7 @@ async function finishRequest(bot, request) {
           candidateName,
           voters
         )
-  }\n${promoAddition}`
+  }`
 
   if (!saved) {
     bot.kickChatMember(request.chat.id, request.candidate.id)
