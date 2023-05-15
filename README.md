@@ -9,7 +9,7 @@ Added Dockerfile and docker-compose instructions for starting in the containter.
 1. Fork this repository
 2. Copy `Dockerfile`, `docker-compose.yaml` and `mongo-init.js` to your server.
 3. Change all `'@rsbanofbot'` strings in `app.js` to the name of your bot
-4. Change repository link in Dockerfile to your own forked repository
+4. Change repository link (after `RUN git clone ...`) in `Dockerfile` to your repository
 5. Run `docker build -t bot .`
 6. Insert your Telegram API token in `docker-compose.yaml`
 7. Run `docker-compose up -d`
