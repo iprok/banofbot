@@ -5,5 +5,11 @@ Ad was removed.
 
 Added Dockerfile and docker-compose instructions for starting in the containter.
 
+# Installation
+1. Copy `Dockerfile`, `docker-compose.yaml` and `mongo-init.js` to your server.
+2. Run `docker build -t bot .'
+3. Run `docker-compose up -d`
+4. Database will be at `./db/` directory
+
 # License
 MIT — use for any purpose. Would be great if you could leave a note about the original developers. Thanks!
