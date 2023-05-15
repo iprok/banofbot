@@ -1,6 +1,8 @@
 # Telegram bot to ban people after the voting
 This is a fork of [banofbot](https://github.com/backmeupplz/banofbot).
+
 Ad was removed.
+
 Added Dockerfile and docker-compose instructions for starting in the containter.
 
 # License
