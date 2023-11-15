@@ -49,7 +49,7 @@ async function startRequest(bot, msg) {
     return
   }
 
-  if (candidate.username === 'banofbot') {
+  if (candidate.username === 'pb_banbot') {
     return
   }
 
