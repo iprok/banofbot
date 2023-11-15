@@ -1,7 +1,9 @@
+version: "3.8"
+
 services:
   mongo:
-    image: mongo:6.0.5
-    restart: always
+    image: mongo:7
+    restart: unless-stopped
     volumes:
       - ./db:/data/db
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
@@ -11,12 +13,16 @@ services:
   bot:
     depends_on:
       - mongo
-    image: bot
-    restart: always
+    image: "node:20"
+    restart: unless-stopped
+    user: "node"
+    working_dir: /app
     environment:
-      NTBA_FIX_319: any
       TELEGRAM_API_KEY: "" # INSERT YOUR KEY HERE
       MONGO_DB_URL: "mongodb://bot:botpass@mongo:27017/botdb"
+    volumes:
+      - ./:/app
+    command: bash -c " npm install && npm start "
     networks:
       - database
 
