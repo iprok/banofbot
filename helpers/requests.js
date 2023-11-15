@@ -15,9 +15,7 @@ const { isOver10000 } = require('./goldenBorodutchSubCount')
 
 const promoAdditions = {
   ru: () =>
-    isOver10000()
-      ? ''
-      : '',
+    '',
   en: () =>
     '',
 }
