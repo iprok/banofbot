@@ -88,6 +88,9 @@ function handle(msg) {
         msg.reply_to_message &&
         msg.text &&
         (msg.text.includes('pb_banbot') ||
+          msg.text.includes('/бан') ||
+          msg.text.includes('/спам') ||
+          msg.text.includes('/удалить') ||
           msg.text.includes('@ban') ||
           msg.text.includes('voteban') ||
           msg.text.includes('Voteban') ||
